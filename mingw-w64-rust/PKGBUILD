@@ -162,6 +162,7 @@ build() {
 
   # Hack hack
   cp -fv ${MINGW_PREFIX}/lib/gcc/${MINGW_CHOST}/12.2.0/libgcc.a ${MINGW_PREFIX}/lib/gcc/${MINGW_CHOST}/12.2.0/libgcc_s.a || true
+  rm -fv /${MINGW_ARCH}/lib/*.dll.a
 
   MSYS2_ARG_CONV_EXCL="--prefix;--sysconfdir;--localstatedir" \
   ../${_realname}c-${pkgver}-src/configure \
